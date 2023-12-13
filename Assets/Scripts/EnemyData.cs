@@ -6,12 +6,12 @@ using UnityEngine;
 public class EnemyData : ScriptableObject
 {
     [Header("Enemy Stats")]
-    [SerializeField] [Tooltip("Enemy difficulty level")] EnemyThreatLevel enemyThreatLevel;
-    [SerializeField] [Tooltip("Enemy name")] string name;
-    [SerializeField] [Range(0,50)] [Tooltip("Radius in which enemy will detect player")] public float detectionRange;
+    [SerializeField] [Tooltip("Enemy difficulty level")] public EnemyThreatLevel enemyThreatLevel;
+    [SerializeField] [Tooltip("Enemy name")] public string enemyName;
+    [SerializeField] [Range(0,10)] [Tooltip("Radius in which enemy will detect player")] public float detectionRange;
 
     [Header("Enemy Combat Stats")]
-    [SerializeField] [Tooltip("Enemy health")] int health;
-    [SerializeField] [Tooltip("Damage dealt by enemy")] int damage;
-    [SerializeField] [Tooltip("The speed in which the enemy will move")] float movementSpeed;
+    [SerializeField] [Tooltip("Enemy health. 0-100")] public int health;
+    [SerializeField] [Tooltip("Damage dealt by enemy")] public int damage;
+    [SerializeField] [Tooltip("The speed in which the enemy will move")] public float movementSpeed;
 }
