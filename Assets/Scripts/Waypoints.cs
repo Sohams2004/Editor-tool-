@@ -9,13 +9,12 @@ using UnityEngine;
 public class Waypoints : MonoBehaviour
 {
     [SerializeField] public Transform[] wayPoints;
-    LinkedList<Transform> way_Points; 
+    [SerializeField] LinkedList<Transform> way_Points; 
     private void Start()
     {
         way_Points = new LinkedList<Transform>(wayPoints);
         
         way_Points.AddFirst(gameObject.transform);
-        Debug.Log(way_Points.Count);
     }
 
     private void OnDrawGizmos()

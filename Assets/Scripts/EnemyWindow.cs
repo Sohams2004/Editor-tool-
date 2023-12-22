@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class EnemyWindow : EditorWindow
 {
-    Vector2 scrollBarPos = Vector2.zero;
-
     [SerializeField] Waypoints waypoints;
 
     SerializedObject serializedObject;
